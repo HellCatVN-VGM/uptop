@@ -269,21 +269,21 @@
                 numpost=postid.length;
                 for (var i = 0; i <numpost; i++) {
                     console.log(postid[i]);
+                    localStorage["postid"] = postid[i];
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
-                        console.log(postid[i]);
+                        console.log(localStorage["postid"]);
                         cmtscontent=cmtscontent.split('|');
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);
                         fetch('logs/token.txt').then(response => response.text()).then((token) => {
-                            //console.log(cmt,token);
-                            $.post('https://graph.facebook.com/'+postid[i]+'/comments?message='+cmt+'&method=POST&access_token='+token, {
-                            }, function(data, status) {
-                                console.log(data);
-                            });
+                            console.log(cmt,token,localStorage["postid"]);
+                            // $.post('https://graph.facebook.com/'+postid[i]+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            // }, function(data, status) {
+                            //     console.log(data);
+                            // });
                         });
-                    });
-                    //console.log(cmt,token);                    
+                    });                 
                 }
             });
             // fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {

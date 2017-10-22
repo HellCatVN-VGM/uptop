@@ -282,7 +282,9 @@
     <script src="js/pages/dashboard.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            fetch('logs/content.txt').then(response => response.text()).then(text => contentscmt=text.split('|');console.log(contentscmt));          
+            fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
+                console.log(cmtscontent);
+            });          
         })
     </script>
 </body>

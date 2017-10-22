@@ -275,7 +275,11 @@
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);
                         fetch('logs/token.txt').then(response => response.text()).then((token) => {
-                            console.log(cmt,token);
+                            //console.log(cmt,token);
+                            $.post('https://graph.facebook.com/'+postid[i]+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            }, function(data, status) {
+                                console.log(data);
+                            });
                         });
                     });                    
                 }

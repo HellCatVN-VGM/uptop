@@ -280,11 +280,11 @@
                                 //More handle     
                                 $.gritter.add({
                                     // (string | mandatory) the heading of the notification
-                                    title: 'Jonh Doe',
+                                    title: 'Thông Báo Hệ Thống',
                                     // (string | mandatory) the text inside the notification
-                                    text: 'User is just logged into system.',
+                                    text: 'Đã Cmt Thành Công Post:'+postid,
                                     // (string | optional) the image to display on the left
-                                    image: 'https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg',
+                                    image: 'graph.facebook.com/100007458363302/picture',
                                     // (string) specify font-face icon  class for close message
                                     close_icon: 'entypo-icon-cancel s12',
                                 });                                                           
@@ -294,8 +294,24 @@
                                         }, function(data, status) {
                                             console.log(data);
                                             //More handle
+                                            if (data==true) {
+                                                $.gritter.add({
+                                                    // (string | mandatory) the heading of the notification
+                                                    title: 'Thông Báo Hệ Thống',
+                                                    // (string | mandatory) the text inside the notification
+                                                    text: 'Đã Cmt Thành Công Post:'+data.id,
+                                                    // (string | optional) the image to display on the left
+                                                    image: 'graph.facebook.com/100007458363302/picture',
+                                                    // (string) specify font-face icon  class for close message
+                                                    close_icon: 'entypo-icon-cancel s12',
+                                                });                                                                            
+                                            }
+                                            else{
+                                                //Nothing 
+                                            }                
                                         });                                        
                                     }else{
+                                        //Nothing 
                                     }
                                 });                                 
                             });

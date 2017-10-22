@@ -267,7 +267,6 @@
                 if (postid!=null) {
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
-                        console.log(localStorage["postid"]);
                         cmtscontent=cmtscontent.split('|');
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);
@@ -275,20 +274,21 @@
                             $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
                             }, function(data, status) {
                                 console.log(data);
+                                fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+                                    console.log(smartcmt);
+                                    if(smartcmt=='true'){
+                                        //console.log(smartcmt);
+                                        console.log(data);
+                                    }else{
+                                        //$( "#agree" ).prop( "checked", false );
+                                    }
+                                });                                 
                             });
                         });
                     });                    
                 }                 
             });
-            // fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
-            //     console.log(smartcmt);
-            //     if(smartcmt=='true'){
-            //         console.log(smartcmt);
-            //         $( "#agree" ).prop( "checked", true );
-            //     }else{
-            //         $( "#agree" ).prop( "checked", false );
-            //     }
-            // });                                  
+                                 
         })
     </script>
 </body>

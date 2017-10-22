@@ -296,8 +296,11 @@
             });
             fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                 console.log(smartcmt);
-                if(smartcmt==true){
+                if(smartcmt=='true'){
                     console.log(smartcmt);
+                    $( "#agree" ).prop( "checked", true );
+                }else{
+                    $( "#agree" ).prop( "checked", false );
                 }
                 // cmtscontent=cmtscontent.split('|');
                 // console.log(cmtscontent);

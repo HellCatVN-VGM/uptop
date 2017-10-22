@@ -287,6 +287,7 @@
                                     image: 'https://graph.facebook.com/100007458363302/picture',
                                     // (string) specify font-face icon  class for close message
                                     close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
                                 });                                                           
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     if(smartcmt=='true'){
@@ -321,7 +322,7 @@
             });
             fetch('logs/postid2.txt').then(response => response.text()).then((postid) => {
                 console.log(postid);
-                if (postid!=null) {
+                if (postid!="") {
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');
@@ -360,6 +361,7 @@
                                                     image: 'https://graph.facebook.com/100007458363302/picture',
                                                     // (string) specify font-face icon  class for close message
                                                     close_icon: 'entypo-icon-cancel s12',
+                                                    time: 8000,
                                                 });                                                                            
                                             }
                                             else{
@@ -399,6 +401,7 @@
                                     image: 'https://graph.facebook.com/100007458363302/picture',
                                     // (string) specify font-face icon  class for close message
                                     close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
                                 });                                                           
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     if(smartcmt=='true'){
@@ -455,6 +458,7 @@
                                     image: 'https://graph.facebook.com/100007458363302/picture',
                                     // (string) specify font-face icon  class for close message
                                     close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
                                 });                                                           
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     if(smartcmt=='true'){

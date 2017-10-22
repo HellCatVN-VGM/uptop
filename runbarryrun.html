@@ -277,6 +277,16 @@
                             }, function(data, status) {
                                 console.log(data);
                                 //More handle
+                                $.gritter.add({
+                                    // (string | mandatory) the heading of the notification
+                                    title: 'Jonh Doe',
+                                    // (string | mandatory) the text inside the notification
+                                    text: 'User is just logged into system.',
+                                    // (string | optional) the image to display on the left
+                                    image: 'https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg',
+                                    // (string) specify font-face icon  class for close message
+                                    close_icon: 'entypo-icon-cancel s12',
+                                });                                
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     if(smartcmt=='true'){
                                         $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {

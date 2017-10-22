@@ -293,7 +293,15 @@
                 $('#postid').val(postid);
                 // cmtscontent=cmtscontent.split('|');
                 // console.log(cmtscontent);
-            });                       
+            });
+            fetch('logs/postid.txt').then(response => response.text()).then((smartcmt) => {
+                //console.log(text);
+                if(smartcmt==true){
+                    console.log(smartcmt);
+                }
+                // cmtscontent=cmtscontent.split('|');
+                // console.log(cmtscontent);
+            });                                  
         })
     </script>
 </body>

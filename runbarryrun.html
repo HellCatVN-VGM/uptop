@@ -274,13 +274,16 @@
                             $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
                             }, function(data, status) {
                                 console.log(data);
+                                //More handle
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     console.log(smartcmt);
                                     if(smartcmt=='true'){
-                                        //console.log(smartcmt);
-                                        console.log(data);
+                                        $.post('https://graph.facebook.com/'+data+'?method=delete&access_token='+token , {
+                                        }, function(data, status) {
+                                            console.log(data);
+                                            //More handle
+                                        });                                        
                                     }else{
-                                        //$( "#agree" ).prop( "checked", false );
                                     }
                                 });                                 
                             });

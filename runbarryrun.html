@@ -268,7 +268,9 @@
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');
-                        var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
+                        var ran = Math.floor(Math.random() * cmtscontent.length);
+                        console.log(ran);
+                        var cmt = cmtscontent[ran];
                         console.log(cmt);
                         fetch('logs/token.txt').then(response => response.text()).then((token) => {
                             $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
@@ -276,9 +278,8 @@
                                 console.log(data);
                                 //More handle
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
-                                    console.log(smartcmt);
                                     if(smartcmt=='true'){
-                                        $.post('https://graph.facebook.com/'+data+'?method=delete&access_token='+token , {
+                                        $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {
                                         }, function(data, status) {
                                             console.log(data);
                                             //More handle

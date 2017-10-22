@@ -195,13 +195,13 @@
                                 <div class="form-group">
                                     <label for="text" class="col-lg-2 col-md-3 control-label">Post ID</label>
                                     <div class="col-lg-10 col-md-9">
-                                        <input id="text" type="text" class="form-control" disabled aria-required="true">
+                                        <input id="postid" type="text" class="form-control" disabled aria-required="true">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="text" class="col-lg-2 col-md-3 control-label">Comments Content</label>
                                     <div class="col-lg-10 col-md-9">
-                                        <textarea id="cmtcontent" type="text" class="form-control" disabled aria-required="true"></textarea>
+                                        <textarea id="cmtcontent" type="text" class="form-control" disabled aria-required="true" rows="5"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -287,7 +287,13 @@
                 $('#cmtcontent').val(cmtscontent);
                 // cmtscontent=cmtscontent.split('|');
                 // console.log(cmtscontent);
-            });          
+            });
+            fetch('logs/postid.txt').then(response => response.text()).then((postid) => {
+                //console.log(text);
+                $('#postid').val(postid);
+                // cmtscontent=cmtscontent.split('|');
+                // console.log(cmtscontent);
+            });                       
         })
     </script>
 </body>

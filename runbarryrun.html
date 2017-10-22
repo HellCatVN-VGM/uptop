@@ -191,28 +191,8 @@
                                 <h4 class="panel-title">Thông Tin Của Hệ Thống</h4>
                                 <div class="panel-controls panel-controls-right"><a href="#" class="panel-refresh"><i class="brocco-icon-refresh s12"></i></a><a href="#" class="toggle panel-minimize"><i class="icomoon-icon-plus"></i></a><a href="#" class="panel-close"><i class="icomoon-icon-close"></i></a></div>
                             </div>
-                            <div class="panel-body form-horizontal group-border stripped">
-                                <div class="form-group">
-                                    <label for="text" class="col-lg-2 col-md-3 control-label">Post ID</label>
-                                    <div class="col-lg-10 col-md-9">
-                                        <input id="postid" type="text" class="form-control" disabled aria-required="true">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="text" class="col-lg-2 col-md-3 control-label">Comments Content</label>
-                                    <div class="col-lg-10 col-md-9">
-                                        <textarea id="cmtcontent" type="text" class="form-control" disabled aria-required="true" rows="5"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="agree" class="col-lg-2 col-md-3 control-label">Smart Comments</label>
-                                    <div class="col-lg-10 col-md-9">
-                                        <div class="checkbox-custom">
-                                            <input type="checkbox" name="agree" id="agree" value="option" disabled>
-                                            <label for="agree">Bật đi ngại gì?</label>
-                                        </div>
-                                    </div>
-                                </div>                                                                                        
+                            <div class="panel-body">
+                                                                                       
                             </div>
                             <div class="panel-footer">Code By <a href="https://www.facebook.com/hellcat.info">HellCatVN-VGM</a></div>
                         </div>
@@ -282,25 +262,30 @@
     <script src="js/pages/dashboard.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
-                console.log(cmtscontent);
-                $('#cmtcontent').val(cmtscontent);
-                // cmtscontent=cmtscontent.split('|');
-                // console.log(cmtscontent);
-            });
+            // fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
+            //     console.log(cmtscontent);
+            //     $('#cmtcontent').val(cmtscontent);
+            //     // cmtscontent=cmtscontent.split('|');
+            //     // console.log(cmtscontent);
+            //     var rand = myArray[Math.floor(Math.random() * myArray.length)];
+            // });
             fetch('logs/postid.txt').then(response => response.text()).then((postid) => {
-                //console.log(text);
-                $('#postid').val(postid);
-            });
-            fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
-                console.log(smartcmt);
-                if(smartcmt=='true'){
-                    console.log(smartcmt);
-                    $( "#agree" ).prop( "checked", true );
-                }else{
-                    $( "#agree" ).prop( "checked", false );
+                postid=postid.split('|');
+                console.log(postid);
+                numpost=postid.length;
+                for (var i = 0; i <numpost; i++) {
+                    console.log(postid[i]);
                 }
-            });                                  
+            });
+            // fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+            //     console.log(smartcmt);
+            //     if(smartcmt=='true'){
+            //         console.log(smartcmt);
+            //         $( "#agree" ).prop( "checked", true );
+            //     }else{
+            //         $( "#agree" ).prop( "checked", false );
+            //     }
+            // });                                  
         })
     </script>
 </body>

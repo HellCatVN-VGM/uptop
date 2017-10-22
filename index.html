@@ -201,7 +201,7 @@
                                 <div class="form-group">
                                     <label for="text" class="col-lg-2 col-md-3 control-label">Comments Content</label>
                                     <div class="col-lg-10 col-md-9">
-                                        <input id="text" type="text" class="form-control" disabled aria-required="true">
+                                        <input id="cmtcontent" type="text" class="form-control" disabled aria-required="true">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -284,8 +284,9 @@
         $(document).ready(function() {
             fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                 console.log(cmtscontent);
-                cmtscontent=cmtscontent.split('|');
-                console.log(cmtscontent);
+                $('#cmtcontent').val(cmtscontent);
+                // cmtscontent=cmtscontent.split('|');
+                // console.log(cmtscontent);
             });          
         })
     </script>

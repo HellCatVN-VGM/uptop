@@ -271,6 +271,7 @@
                     console.log(postid[i]);
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
+                        console.log(postid[i]);
                         cmtscontent=cmtscontent.split('|');
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);
@@ -281,7 +282,8 @@
                                 console.log(data);
                             });
                         });
-                    });                    
+                    });
+                    console.log(cmt,token);                    
                 }
             });
             // fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {

@@ -246,6 +246,7 @@
     <!-- Other plugins ( load only nessesary plugins for every page) -->
     <script src="plugins/charts/sparklines/jquery.sparkline.js"></script>
     <script src="plugins/charts/knob/jquery.knob.js"></script>
+    <script src="plugins/ui/notify/jquery.gritter.js"></script>
     <script src="plugins/charts/flot/jquery.flot.custom.js"></script>
         <script src="plugins/charts/flot/jquery.flot.pie.js"></script>
         <script src="plugins/charts/flot/jquery.flot.resize.js"></script>
@@ -276,7 +277,7 @@
                             $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
                             }, function(data, status) {
                                 console.log(data);
-                                //More handle
+                                //More handle     
                                 $.gritter.add({
                                     // (string | mandatory) the heading of the notification
                                     title: 'Jonh Doe',
@@ -286,7 +287,7 @@
                                     image: 'https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg',
                                     // (string) specify font-face icon  class for close message
                                     close_icon: 'entypo-icon-cancel s12',
-                                });                                
+                                });                                                           
                                 fetch('logs/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
                                     if(smartcmt=='true'){
                                         $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {

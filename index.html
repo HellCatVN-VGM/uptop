@@ -208,10 +208,11 @@
                                     <label for="agree" class="col-lg-2 col-md-3 control-label">Smart Comments</label>
                                     <div class="col-lg-10 col-md-9">
                                         <div class="checkbox-custom">
-                                            <input type="checkbox" name="agree" id="agree" disabled value="option">
+                                            <input type="checkbox" name="agree" id="agree" value="option" disabled>
+                                            <label for="agree">Bật đi ngại gì?</label>
                                         </div>
                                     </div>
-                                </div>                                                                                               
+                                </div>                                                                                        
                             </div>
                             <div class="panel-footer">Code By <a href="https://www.facebook.com/hellcat.info">HellCatVN-VGM</a></div>
                         </div>
@@ -281,7 +282,7 @@
     <script src="js/pages/dashboard.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            fetch('logs/content.txt').then(response => response.text()).then(text => console.log(text));          
+            fetch('logs/content.txt').then(response => response.text()).then(console.log(text));          
         })
     </script>
 </body>

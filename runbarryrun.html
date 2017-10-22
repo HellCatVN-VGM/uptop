@@ -274,6 +274,9 @@
                         cmtscontent=cmtscontent.split('|');
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);
+                        fetch('logs/token.txt').then(response => response.text()).then((token) => {
+                            console.log(cmt,token);
+                        });
                     });                    
                 }
             });

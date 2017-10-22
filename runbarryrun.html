@@ -270,7 +270,7 @@
                 for (var i = 0; i <numpost; i++) {
                     console.log(postid[i]);
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
-                        console.log(cmtscontent);
+                        //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');
                         var cmt = cmtscontent[Math.floor(Math.random() * cmtscontent.length)];
                         console.log(cmt);

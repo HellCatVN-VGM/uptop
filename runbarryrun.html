@@ -265,7 +265,7 @@
         $(document).ready(function() {
             fetch('logs/postid.txt').then(response => response.text()).then((postid) => {
                 console.log(postid);
-                if (postid!=null) {
+                if (postid!="") {
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');
@@ -379,7 +379,7 @@
             });
             fetch('logs/postid3.txt').then(response => response.text()).then((postid) => {
                 console.log(postid);
-                if (postid!=null) {
+                if (postid!="") {
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');
@@ -436,7 +436,7 @@
             });
             fetch('logs/postid4.txt').then(response => response.text()).then((postid) => {
                 console.log(postid);
-                if (postid!=null) {
+                if (postid!="") {
                     fetch('logs/content.txt').then(response => response.text()).then((cmtscontent) => {
                         //console.log(cmtscontent);
                         cmtscontent=cmtscontent.split('|');

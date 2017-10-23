@@ -1,0 +1,562 @@
+<!doctype html>
+<!--[if lt IE 8]><html class="no-js lt-ie8"> <![endif]-->
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Up Top Bài Viết</title>
+    <!-- Mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Force IE9 to render in normal mode -->
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="application-name" content="" />
+    <!-- Import google fonts - Heading first/ text second -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <!-- Css files -->
+    <!-- Icons -->
+    <link href="css/icons.css" rel="stylesheet" />
+    <!-- Bootstrap stylesheets (included template modifications) -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- Plugins stylesheets (all plugin custom css) -->
+    <link href="css/plugins.css" rel="stylesheet" />
+    <!-- Main stylesheets (template main css file) -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- Fav and touch icons -->
+    <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
+    <meta name="msapplication-TileColor" content="#3399cc" />
+<style type="text/css">
+@font-face {
+  font-family: neon;
+  src: url(fonts/neon.ttf);
+}
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 3vw;
+  line-height: 3vw;
+  text-shadow: 0 0 1vw #F40A35;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}    
+</style>   
+</head>
+<body>
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- .#header -->
+    <div id="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                Up Top Bài Viết
+            </a>
+            </div>
+            <div id="navbar-no-collapse" class="navbar-no-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html#" class="tipB reset-layout" title="Reset panel postions"><i class="s16 icomoon-icon-history"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="s16 icomoon-icon-cog-2"></i><span class="txt"> Settings</span>
+                                <b class="caret"></b>
+                            </a>
+                        <ul class="dropdown-menu left dropdown-form template-settings">
+                            <li class="menu">
+                                <ul role="menu">
+                                    <li><strong>Template settings</strong>
+                                    </li>
+                                    <li>
+                                        <div class="toggle-custom">
+                                            <label class="toggle" data-on="ON" data-off="OFF">
+                                                <input type="checkbox" id="fixed-header-toggle" name="fixed-header-toggle" checked>
+                                                <span class="button-checkbox"></span>
+                                            </label>
+                                            <label for="fixed-header-toggle">Fixed header</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="toggle-custom">
+                                            <label class="toggle" data-on="ON" data-off="OFF">
+                                                <input type="checkbox" id="fixed-left-sidebar" name="fixed-left-sidebar" checked>
+                                                <span class="button-checkbox"></span>
+                                            </label>
+                                            <label for="fixed-left-sidebar">Fixed Left Sidebar</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="toggle-custom">
+                                            <label class="toggle" data-on="ON" data-off="OFF">
+                                                <input type="checkbox" id="fixed-right-sidebar" name="fixed-right-sidebar" checked>
+                                                <span class="button-checkbox"></span>
+                                            </label>
+                                            <label for="fixed-right-sidebar">Fixed Right Sidebar</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="s16 minia-icon-envelope"></i><span class="txt">Messages</span><span class="notification">8</span>
+                            </a>
+                        <ul class="dropdown-menu left">
+                            <li class="menu">
+                                <ul class="messages">
+                                    <li class="header"><strong>Messages</strong> (10) emails and (2) PM</li>
+                                    <li>
+                                        <span class="icon"><i class="s16 icomoon-icon-user-plus"></i></span>
+                                        <span class="name"><a data-toggle="modal" href="index.html#myModal1"><strong>Sammy Morerira</strong></a><span class="time">35 min ago</span></span>
+                                        <span class="msg">I have question about new function ...</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon avatar"><img src="img/avatar.png" alt="" /></span>
+                                        <span class="name"><a data-toggle="modal" href="index.html#myModal1"><strong>George Michael</strong></a><span class="time">1 hour ago</span></span>
+                                        <span class="msg">I need to meet you urgent please call me ...</span>
+                                    </li>
+                                    <li>
+                                        <span class="icon"><i class="s16 icomoon-icon-envelop"></i></span>
+                                        <span class="name"><a data-toggle="modal" href="index.html#myModal1"><strong>Ivanovich</strong></a><span class="time">1 day ago</span></span>
+                                        <span class="msg">I send you my suggestion, please look and ...</span>
+                                    </li>
+                                    <li class="view-all"><a href="index.html#">View all messages <i class="s16 fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-right usernav">
+                    <li class="dropdown">
+                        <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="s16 icomoon-icon-earth"></i><span class="notification">3</span>
+                            </a>
+                        <ul class="dropdown-menu right">
+                            <li class="menu">
+                                <ul class="notif">
+                                    <li class="header"><strong>Notifications</strong> (3) items</li>
+                                    <li>
+                                        <a href="index.html#">
+                                                <span class="icon"><i class="s16 icomoon-icon-user-plus"></i></span>
+                                                <span class="event">1 User is registred</span>
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                                <span class="icon"><i class="s16 icomoon-icon-bubble-3"></i></span>
+                                                <span class="event">Jony add 1 comment</span>
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">
+                                                <span class="icon"><i class="s16 icomoon-icon-new"></i></span>
+                                                <span class="event">admin Julia added post with a long description</span>
+                                            </a>
+                                    </li>
+                                    <li class="view-all"><a href="index.html#">View all notifications <i class="s16 fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#" class="dropdown-toggle avatar" data-toggle="dropdown">
+                                <img src="img/avatar.png" alt="" class="image" />
+                                <span class="txt">admin@hellcatvn.com</span>
+                                <b class="caret"></b>
+                            </a>
+                        <ul class="dropdown-menu right">
+                            <li class="menu">
+                                <ul>
+                                    <li><a href="index.html#"><i class="s16 icomoon-icon-user-plus"></i>Edit profile</a>
+                                    </li>
+                                    <li><a href="index.html#"><i class="s16 icomoon-icon-bubble-2"></i>Comments</a>
+                                    </li>
+                                    <li><a href="index.html#"><i class="s16 icomoon-icon-plus"></i>Add user</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html"><i class="s16 icomoon-icon-exit"></i><span class="txt"> Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.nav-collapse -->
+        </nav>
+        <!-- /navbar -->
+    </div>
+    <!-- / #header -->
+    <div id="wrapper">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="content">
+                    <div id="contentwrapper">
+                        <div class="panel panel-default toggle panelClose panelRefresh panelMove" id="tokendiv" style="margin-top: 10px;">
+                            <!-- Start .panel -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Thông Tin Của Hệ Thống</h4>
+                                <div class="panel-controls panel-controls-right"><a href="#" class="panel-refresh"><i class="brocco-icon-refresh s12"></i></a><a href="#" class="toggle panel-minimize"><i class="icomoon-icon-plus"></i></a><a href="#" class="panel-close"><i class="icomoon-icon-close"></i></a></div>
+                            </div>
+                            <div class="panel-body">
+                                <img src="img/barry.gif" class="center-block">
+                                <br><br>
+                                <div class="neon text-center">Barry Is running</div>
+                                <br><br>                                      
+                            </div>
+                            <div class="panel-footer">Code By <a href="https://www.facebook.com/hellcat.info">HellCatVN-VGM</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / #wrapper -->
+    <!-- Back to top -->
+    <div id="back-to-top"><a href="index.html#">Back to Top</a>
+    </div>
+    <!-- Javascripts -->
+    <!-- Load pace first -->
+    <script src="plugins/core/pace/pace.min.js"></script>
+    <!-- Important javascript libs(put in all pages) -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-2.1.1.min.js">\x3C/script>')
+    </script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-ui-1.10.4.min.js">\x3C/script>')
+    </script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/libs/jquery-migrate-1.2.1.min.js">\x3C/script>')
+    </script>
+    <!--[if lt IE 9]>
+  <script type="text/javascript" src="js/libs/excanvas.min.js"></script>
+  <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript" src="js/libs/respond.min.js"></script>
+<![endif]-->
+    <!-- Bootstrap plugins -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <!-- Core plugins ( not remove ) -->
+    <script src="js/libs/modernizr.custom.js"></script>
+    <!-- Handle responsive view functions -->
+    <script src="js/jRespond.min.js"></script>
+    <!-- Custom scroll for sidebars,tables and etc. -->
+    <script src="plugins/core/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="plugins/core/slimscroll/jquery.slimscroll.horizontal.min.js"></script>
+    <!-- Remove click delay in touch -->
+    <script src="plugins/core/fastclick/fastclick.js"></script>
+    <!-- Increase jquery animation speed -->
+    <script src="plugins/core/velocity/jquery.velocity.min.js"></script>
+    <!-- Quick search plugin (fast search for many widgets) -->
+    <script src="plugins/core/quicksearch/jquery.quicksearch.js"></script>
+    <!-- Bootbox fast bootstrap modals -->
+    <script src="plugins/ui/bootbox/bootbox.js"></script>
+    <!-- Other plugins ( load only nessesary plugins for every page) -->
+    <script src="plugins/charts/sparklines/jquery.sparkline.js"></script>
+    <script src="plugins/charts/knob/jquery.knob.js"></script>
+    <script src="plugins/ui/notify/jquery.gritter.js"></script>
+    <script src="plugins/charts/flot/jquery.flot.custom.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.pie.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.resize.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.time.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.growraf.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.categories.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.stack.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.orderBars.js"></script>
+        <script src="plugins/charts/flot/jquery.flot.tooltip.min.js"></script> 
+    <script src="plugins/ui/waypoint/waypoints.js"></script>
+    <script src="plugins/forms/autosize/jquery.autosize.js"></script>
+    <script src="js/jquery.supr.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/dashboard.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            fetch('logs2/postid.txt').then(response => response.text()).then((postid) => {
+                console.log(postid);
+                if (postid!="") {
+                    fetch('logs2/content.txt').then(response => response.text()).then((cmtscontent) => {
+                        //console.log(cmtscontent);
+                        cmtscontent=cmtscontent.split('|');
+                        var ran = Math.floor(Math.random() * cmtscontent.length);
+                        console.log(ran);
+                        var cmt = cmtscontent[ran];
+                        console.log(cmt);
+                        fetch('logs2/token.txt').then(response => response.text()).then((token) => {
+                            $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            }, function(data, status) {
+                                console.log(data);
+                                //More handle     
+                                $.gritter.add({
+                                    // (string | mandatory) the heading of the notification
+                                    title: 'Thông Báo Hệ Thống',
+                                    // (string | mandatory) the text inside the notification
+                                    text: 'Đã Cmt Thành Công Post:'+postid,
+                                    // (string | optional) the image to display on the left
+                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                    // (string) specify font-face icon  class for close message
+                                    close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
+                                });                                                           
+                                fetch('logs2/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+                                    if(smartcmt=='true'){
+                                        $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {
+                                        }, function(data, status) {
+                                            console.log(data);
+                                            //More handle
+                                            if (data==true) {
+                                                $.gritter.add({
+                                                    // (string | mandatory) the heading of the notification
+                                                    title: 'Thông Báo Hệ Thống',
+                                                    // (string | mandatory) the text inside the notification
+                                                    text: 'Đã Xóa Thành Công CMT ID:'+data.id,
+                                                    // (string | optional) the image to display on the left
+                                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                                    // (string) specify font-face icon  class for close message
+                                                    close_icon: 'entypo-icon-cancel s12',
+                                                });                                                                            
+                                            }
+                                            else{
+                                                //Nothing 
+                                            }                
+                                        });                                        
+                                    }else{
+                                        //Nothing 
+                                    }
+                                });                                 
+                            });
+                        });
+                    });                    
+                }                 
+            });
+            fetch('logs2/postid2.txt').then(response => response.text()).then((postid) => {
+                console.log(postid);
+                if (postid!="") {
+                    fetch('logs2/content.txt').then(response => response.text()).then((cmtscontent) => {
+                        //console.log(cmtscontent);
+                        cmtscontent=cmtscontent.split('|');
+                        var ran = Math.floor(Math.random() * cmtscontent.length);
+                        console.log(ran);
+                        var cmt = cmtscontent[ran];
+                        console.log(cmt);
+                        fetch('logs2/token.txt').then(response => response.text()).then((token) => {
+                            $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            }, function(data, status) {
+                                console.log(data);
+                                //More handle     
+                                $.gritter.add({
+                                    // (string | mandatory) the heading of the notification
+                                    title: 'Thông Báo Hệ Thống',
+                                    // (string | mandatory) the text inside the notification
+                                    text: 'Đã Cmt Thành Công Post:'+postid,
+                                    // (string | optional) the image to display on the left
+                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                    // (string) specify font-face icon  class for close message
+                                    close_icon: 'entypo-icon-cancel s12',
+                                });                                                           
+                                fetch('logs2/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+                                    if(smartcmt=='true'){
+                                        $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {
+                                        }, function(data, status) {
+                                            console.log(data);
+                                            //More handle
+                                            if (data==true) {
+                                                $.gritter.add({
+                                                    // (string | mandatory) the heading of the notification
+                                                    title: 'Thông Báo Hệ Thống',
+                                                    // (string | mandatory) the text inside the notification
+                                                    text: 'Đã Xóa Thành Công CMT ID:'+data.id,
+                                                    // (string | optional) the image to display on the left
+                                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                                    // (string) specify font-face icon  class for close message
+                                                    close_icon: 'entypo-icon-cancel s12',
+                                                    time: 8000,
+                                                });                                                                            
+                                            }
+                                            else{
+                                                //Nothing 
+                                            }                
+                                        });                                        
+                                    }else{
+                                        //Nothing 
+                                    }
+                                });                                 
+                            });
+                        });
+                    });                    
+                }                 
+            });
+            fetch('logs2/postid3.txt').then(response => response.text()).then((postid) => {
+                console.log(postid);
+                if (postid!="") {
+                    fetch('logs2/content.txt').then(response => response.text()).then((cmtscontent) => {
+                        //console.log(cmtscontent);
+                        cmtscontent=cmtscontent.split('|');
+                        var ran = Math.floor(Math.random() * cmtscontent.length);
+                        console.log(ran);
+                        var cmt = cmtscontent[ran];
+                        console.log(cmt);
+                        fetch('logs2/token.txt').then(response => response.text()).then((token) => {
+                            $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            }, function(data, status) {
+                                console.log(data);
+                                //More handle     
+                                $.gritter.add({
+                                    // (string | mandatory) the heading of the notification
+                                    title: 'Thông Báo Hệ Thống',
+                                    // (string | mandatory) the text inside the notification
+                                    text: 'Đã Cmt Thành Công Post:'+postid,
+                                    // (string | optional) the image to display on the left
+                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                    // (string) specify font-face icon  class for close message
+                                    close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
+                                });                                                           
+                                fetch('logs2/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+                                    if(smartcmt=='true'){
+                                        $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {
+                                        }, function(data, status) {
+                                            console.log(data);
+                                            //More handle
+                                            if (data==true) {
+                                                $.gritter.add({
+                                                    // (string | mandatory) the heading of the notification
+                                                    title: 'Thông Báo Hệ Thống',
+                                                    // (string | mandatory) the text inside the notification
+                                                    text: 'Đã Xóa Thành Công CMT ID:'+data.id,
+                                                    // (string | optional) the image to display on the left
+                                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                                    // (string) specify font-face icon  class for close message
+                                                    close_icon: 'entypo-icon-cancel s12',
+                                                });                                                                            
+                                            }
+                                            else{
+                                                //Nothing 
+                                            }                
+                                        });                                        
+                                    }else{
+                                        //Nothing 
+                                    }
+                                });                                 
+                            });
+                        });
+                    });                    
+                }                 
+            });
+            fetch('logs2/postid4.txt').then(response => response.text()).then((postid) => {
+                console.log(postid);
+                if (postid!="") {
+                    fetch('logs2/content.txt').then(response => response.text()).then((cmtscontent) => {
+                        //console.log(cmtscontent);
+                        cmtscontent=cmtscontent.split('|');
+                        var ran = Math.floor(Math.random() * cmtscontent.length);
+                        console.log(ran);
+                        var cmt = cmtscontent[ran];
+                        console.log(cmt);
+                        fetch('logs2/token.txt').then(response => response.text()).then((token) => {
+                            $.post('https://graph.facebook.com/'+postid+'/comments?message='+cmt+'&method=POST&access_token='+token, {
+                            }, function(data, status) {
+                                console.log(data);
+                                //More handle     
+                                $.gritter.add({
+                                    // (string | mandatory) the heading of the notification
+                                    title: 'Thông Báo Hệ Thống',
+                                    // (string | mandatory) the text inside the notification
+                                    text: 'Đã Cmt Thành Công Post:'+postid,
+                                    // (string | optional) the image to display on the left
+                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                    // (string) specify font-face icon  class for close message
+                                    close_icon: 'entypo-icon-cancel s12',
+                                    time: 8000,
+                                });                                                           
+                                fetch('logs2/xoacmt.txt').then(response => response.text()).then((smartcmt) => {
+                                    if(smartcmt=='true'){
+                                        $.post('https://graph.facebook.com/'+data.id+'?method=delete&access_token='+token , {
+                                        }, function(data, status) {
+                                            console.log(data);
+                                            //More handle
+                                            if (data==true) {
+                                                $.gritter.add({
+                                                    // (string | mandatory) the heading of the notification
+                                                    title: 'Thông Báo Hệ Thống',
+                                                    // (string | mandatory) the text inside the notification
+                                                    text: 'Đã Xóa Thành Công CMT ID:'+data.id,
+                                                    // (string | optional) the image to display on the left
+                                                    image: 'https://graph.facebook.com/100007458363302/picture',
+                                                    // (string) specify font-face icon  class for close message
+                                                    close_icon: 'entypo-icon-cancel s12',
+                                                });                                                                            
+                                            }
+                                            else{
+                                                //Nothing 
+                                            }                
+                                        });                                        
+                                    }else{
+                                        //Nothing 
+                                    }
+                                });                                 
+                            });
+                        });
+                    });                    
+                }                 
+            });                                 
+            setTimeout(function(){
+               window.location.reload(1);
+            }, 300000);                                 
+        })
+    </script>
+</body>
+
+</html>
